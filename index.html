@@ -258,10 +258,10 @@
       /* ---------- entry ---------- */
 
       try {
-        if (window.location.hostname === CONFIG.oldHost) {
-          send();
-        } else if (window.location.hostname === CONFIG.newHost) {
+        if (window.location.hostname === CONFIG.newHost) {
           receive();
+        } else {
+          send();
         }
       } catch (e) {
         try {
